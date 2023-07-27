@@ -1,0 +1,25 @@
+{
+	"name": "interactive-rating-component-main",
+	"version": "1.0.0",
+	"description": "Internship project",
+	"main": "./src/controller.js",
+	"default": "index.html",
+	"scripts": {
+		"parse": "parcel index.html",
+		"build": "parcel build index.html --dist-dir ./dist"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/Hargent/interactive-rating-component.git"
+	},
+	"author": "Hargent",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Hargent/interactive-rating-component/issues"
+	},
+	"homepage": "https://github.com/Hargent/interactive-rating-component#readme",
+	"devDependencies": {
+		"parcel": "^2.9.3",
+		"process": "^0.11.10"
+	}
+}
