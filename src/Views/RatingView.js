@@ -9,6 +9,14 @@ class RatingView extends View {
 
 			if (!valueBtn) return;
 
+			const buttons =
+				this._parentEl.querySelectorAll(".rating__value-btn");
+			for (const btn of buttons) {
+				btn.classList.remove("checked");
+			}
+
+			valueBtn.classList.add("checked");
+
 			const value = valueBtn.dataset.value;
 			handler(value);
 		});
@@ -57,7 +65,7 @@ class RatingView extends View {
                             </ul>
                         </div>
                         <div class="rating__submit">
-                            <button class="rating__submit-btn">submit</button>
+                            <button class="rating__submit-btn"><span>submit</span></button>
                         </div>
 				</div>`;
 

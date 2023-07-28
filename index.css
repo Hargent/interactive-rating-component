@@ -7,6 +7,7 @@
 	--Dark-Blue: hsl(213, 19%, 18%);
 	--Very-Dark-Blue: hsl(216, 12%, 8%);
 	--Very-Dark-Blue-1: hsl(225, 15%, 11%);
+	--Medium-Dark-Blue: #3b4048;
 }
 /* FOnts */
 @font-face {
@@ -78,7 +79,7 @@ body {
 	height: 4rem;
 
 	margin-top: 1.5rem;
-	background-color: aliceblue;
+	background-color: var(--Medium-Dark-Blue);
 	border-radius: 50%;
 
 	display: flex;
@@ -140,6 +141,13 @@ body {
 
 	font-size: medium;
 	font-family: Overpass-Regular;
+
+	background-color: var(--Medium-Dark-Blue);
+	color: var(--Light-Grey);
+}
+.rating__value button:hover {
+	background-color: var(--Orange);
+	color: var(--White);
 }
 
 .rating__submit {
@@ -163,6 +171,17 @@ body {
 
 	font-size: 2rem;
 	font-family: Overpass-Regular;
+
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+.rating__submit-btn span {
+	margin-top: 0.65rem;
+}
+.checked {
+	background-color: var(--Medium-Grey) !important;
+	color: var(--White) !important;
 }
 /* Thanking Styles */
 .thanks {
@@ -196,7 +215,8 @@ body {
 	border-radius: 50rem;
 	margin-bottom: 3rem;
 
-	font-size: 1.5rem;
+	font-size: 1.4rem;
+	font-family: Overpass-Regular;
 	width: fit-content;
 
 	display: flex;
@@ -204,7 +224,7 @@ body {
 	justify-content: center;
 
 	color: var(--Orange);
-	background-color: aliceblue;
+	background-color: var(--Medium-Dark-Blue);
 }
 .thanks_rate > figure {
 	margin: 0 0.5rem;
