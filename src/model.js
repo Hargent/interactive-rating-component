@@ -1,4 +1,10 @@
 const state = {
-	location: ["rating", "thanks"],
 	rating: null
 };
+
+const saveRatingValue = value => {
+	state.rating = value;
+	// console.log(state.rating);
+};
+
+export { state, saveRatingValue };

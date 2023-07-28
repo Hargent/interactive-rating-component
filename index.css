@@ -6,6 +6,7 @@
 	--Medium-Grey: hsl(216, 12%, 54%);
 	--Dark-Blue: hsl(213, 19%, 18%);
 	--Very-Dark-Blue: hsl(216, 12%, 8%);
+	--Very-Dark-Blue-1: hsl(225, 15%, 11%);
 }
 /* FOnts */
 @font-face {
@@ -32,15 +33,271 @@ html {
 }
 body {
 	box-sizing: inherit;
-	background-color: var(--Very-Dark-Blue);
 	width: 100%;
+	background-color: var(--Very-Dark-Blue);
+
+	position: relative;
 }
 /* STYLES */
+
 #root {
 	width: 80%;
 	height: 100%;
 	margin: auto;
+	background-color: var(--Very-Dark-Blue-1);
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Rating styles */
+.rating {
 	background-color: var(--Dark-Blue);
+	width: 50%;
+	/* height: 60vh; */
+	min-width: 40rem;
+	max-width: 50rem;
+	min-height: 35rem;
+	border-radius: 3rem;
+	padding: 3rem;
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+
+	cursor: context-menu;
+}
+.rating > * {
+	margin-bottom: 3rem;
+}
+.rating__icon-container {
+	width: 4rem;
+	height: 4rem;
+
+	margin-top: 1.5rem;
+	background-color: aliceblue;
+	border-radius: 50%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.rating__icon {
+	width: 40%;
+	height: 40%;
+}
+.rating__intro {
+	text-align: left;
+}
+.rating__intro p {
+	color: var(--Light-Grey);
+
+	font-family: Overpass-Regular;
+	font-size: 2rem;
+
+	/* width: 90%; */
+}
+
+.rating__intro h1 {
+	font-size: 3rem;
+	font-family: Overpass-Bold;
+
+	color: var(--White);
+
+	padding-bottom: 2rem;
+}
+.rating__value-container {
+	width: 100%;
+}
+.rating__values {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 100%;
+}
+.rating__values > *:not(:last-child) {
+	margin-right: auto;
+}
+.rating__value {
+	list-style: none;
+
+	/* padding: 2rem; */
+	border-radius: 50%;
+}
+.rating__value button {
+	cursor: pointer;
+
+	width: 5rem;
+	height: 5rem;
+
+	border-radius: 50%;
+	border: none;
+	outline: none;
+
+	font-size: medium;
+	font-family: Overpass-Regular;
+}
+
+.rating__submit {
+	width: 100%;
+	margin-bottom: 0.75rem;
+}
+.rating__submit-btn {
+	width: 100%;
+	padding: 1rem 3rem;
+
+	background-color: var(--Orange);
+	color: var(--White);
+
+	border: none;
+	border-radius: 500rem;
+
+	text-align: center;
+	text-transform: uppercase;
+
+	cursor: pointer;
+
+	font-size: 2rem;
+	font-family: Overpass-Regular;
+}
+/* Thanking Styles */
+.thanks {
+	background-color: var(--Dark-Blue);
+	width: 30%;
+	/* height: 60vh; */
+	min-width: 35em;
+	max-width: 50rem;
+	min-height: 35rem;
+	border-radius: 5rem;
+	padding: 1.5rem;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+
+	/* background-image: linear-gradient(
+		to top,
+		var(--Dark-Blue),
+		var(--Medium-Grey)
+	); */
+	/* mix-blend-mode: darken; */
+	/* display: grid; */
+}
+.thanks > * {
+	margin-bottom: 3rem;
+}
+.thanks_rate {
+	padding: 0.75rem 1.5rem;
+	border-radius: 50rem;
+	margin-bottom: 3rem;
+
+	font-size: 1.5rem;
+	width: fit-content;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	color: var(--Orange);
+	background-color: aliceblue;
+}
+.thanks_rate > figure {
+	margin: 0 0.5rem;
+}
+.thanks__icon-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	/* margin-bottom: 0%; */
+}
+.thanks__icon {
+	width: 50%;
+	/* height: 70%; */
+}
+.thanks__dialogue {
+	margin-bottom: 2rem;
+}
+.thanks__dialogue-content {
+	width: 90%;
+	margin: auto;
+	/* align-self: c
+    enter;
+     */
+}
+.thanks__dialogue-content > *:last-child {
+	width: 90%;
+	margin: auto;
+	text-align: center;
+}
+.thanks__dialogue-content p {
+	color: var(--Light-Grey);
+	font-size: 1.39rem;
+
+	text-align: center;
+	/* width: 90%; */
+}
+
+.thanks__dialogue h1 {
+	font-size: 3rem;
+	color: var(--White);
+	text-align: center;
+
+	padding-bottom: 2rem;
+}
+/* MEDIA QUERIES */
+@media only screen and (max-width: 800px) {
+	#root {
+		width: 100%;
+		height: 80%;
+
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+@media only screen and (max-width: 400px) {
+	.rating {
+		transform: scale(0.9);
+	}
+	.thanks {
+		transform: scale(0.9);
+	}
+	.rating__intro p {
+		font-size: 2.5rem !important;
+	}
+
+	.rating__submit-btn {
+		font-size: 2rem;
+	}
+}
+@media only screen and (max-width: 375px) {
+	.rating {
+		transform: scale(0.8);
+	}
+	.thanks {
+		transform: scale(0.8);
+	}
+	.rating__value button {
+		font-size: 2rem;
+	}
+}
+@media only screen and (max-width: 300px) {
+	.rating {
+		transform: scale(0.6);
+	}
+	.thanks {
+		transform: scale(0.6);
+	}
+	.thanks__dialogue-content p {
+		font-size: 1.9rem;
+	}
 }
 .attribution {
 	font-size: 11px;
