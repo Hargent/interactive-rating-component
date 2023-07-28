@@ -8,3 +8,7 @@ const saveRatingValue = value => {
 };
 
 export { state, saveRatingValue };
+// "devDependencies": {
+// 		"parcel": "^2.9.3",
+// 		"process": "^0.11.10"
+// 	}

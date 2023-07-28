@@ -2,7 +2,6 @@
 	"name": "interactive-rating-component-main",
 	"version": "1.0.0",
 	"description": "Internship project",
-	"main": "./src/controller.js",
 	"default": "index.html",
 	"scripts": {
 		"parse": "parcel index.html",
@@ -19,6 +18,7 @@
 	},
 	"homepage": "https://github.com/Hargent/interactive-rating-component#readme",
 	"devDependencies": {
+		"@parcel/transformer-sass": "^2.8.3",
 		"parcel": "^2.9.3",
 		"process": "^0.11.10"
 	}
